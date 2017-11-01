@@ -37,7 +37,7 @@ here is  a sidebar
 
 				                    <li class="nav-parent nav-expanded nav-active">
 				                        <a >
-				                            <i class="fa fa-users" aria-hidden="true"></i>
+				                            <i class="fa fa-columns" aria-hidden="true"></i>
 				                            <span>Users</span>
 				                        </a>
 				                        <ul class="nav nav-children">
@@ -91,7 +91,7 @@ here is  a sidebar
 								@role('admin')
 									<li class="nav-parent">
 				                        <a >
-				                            <i class="glyphicon glyphicon-tags" aria-hidden="true"></i>
+				                            <i class="fa fa-tasks" aria-hidden="true"></i>
 				                            <span>Category</span>
 				                        </a>
 				                        <ul class="nav nav-children">

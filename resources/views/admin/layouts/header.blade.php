@@ -14,35 +14,50 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
         <!-- Web Fonts  -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+        <link 
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
 
         <!-- Vendor CSS -->
-        <link type="text/css" rel="stylesheet" href="{{ asset('admin-assets/assets/vendor/bootstrap/css/bootstrap.css')}}"/>
+        <link type="text/css" rel="stylesheet" 
+              href="{{ asset('admin-assets/assets/vendor/bootstrap/css/bootstrap.css')}}"/>
 
 
-    <link type="text/css" rel="stylesheet" href="{{ asset('admin-assets/assets/vendor/font-awesome/css/font-awesome.css')}}"/>
-        <link type="text/css" rel="stylesheet" href="{{ asset('admin-assets/assets/vendor/magnific-popup/magnific-popup.css')}}"/>
-        <link type="text/css" rel="stylesheet" href="{{ asset('admin-assets/assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css')}}"/>
+        <link type="text/css" rel="stylesheet" 
+                     href="{{ asset('admin-assets/assets/vendor/font-awesome/css/font-awesome.css')}}"/>
+
+        <link type="text/css" rel="stylesheet" 
+            href="{{ asset('admin-assets/assets/vendor/magnific-popup/magnific-popup.css')}}"/>
+
+        <link type="text/css" rel="stylesheet"
+             href="{{ asset('admin-assets/assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css')}}"/>
      
 
      
 
         <!-- Specific Page Vendor CSS -->
-       <link type="text/css" rel="stylesheet" href="{{ asset('admin-assets/assets/vendor/owl.carousel/assets/owl.carousel.css')}}"/>
-        <link type="text/css" rel="stylesheet" href="{{ asset('admin-assets/assets/vendor/owl.carousel/assets/owl.theme.default.css')}}"/>
+       <link type="text/css" rel="stylesheet" 
+                href="{{ asset('admin-assets/assets/vendor/owl.carousel/assets/owl.carousel.css')}}"/>
+        <link type="text/css" rel="stylesheet" 
+              href="{{ asset('admin-assets/assets/vendor/owl.carousel/assets/owl.theme.default.css')}}"/>
 
         <!-- Theme CSS -->
-        <link type="text/css" rel="stylesheet" href="{{ asset('admin-assets/assets/stylesheets/theme.css')}}"/>
+        <link type="text/css" rel="stylesheet" 
+              href="{{ asset('admin-assets/assets/stylesheets/theme.css')}}"/>
 
         <!-- Skin CSS -->
-        <link type="text/css" rel="stylesheet" href="{{ asset('admin-assets/assets/stylesheets/skins/default.css')}}"/>
+        <link type="text/css" rel="stylesheet" 
+              href="{{ asset('admin-assets/assets/stylesheets/skins/default.css')}}"/>
 
         <!-- Theme Custom CSS -->
-        <link type="text/css" rel="stylesheet" href="{{ asset('admin-assets/assets/stylesheets/theme-custom.css')}}"/>
+        <link type="text/css" rel="stylesheet" 
+              href="{{ asset('admin-assets/assets/stylesheets/theme-custom.css')}}"/>
 
         <!-- Head Libs -->
         <script src="{{ asset('admin-assets/assets/vendor/modernizr/modernizr.js')}}"></script>
-
+        <!-- MY custom css -->
+        <link type="text/css" rel="stylesheet" 
+              href="{{ asset('admin-assets/assets/stylesheets/custom.css')}}"/>
+    @yield('header')
     </head>
 
 <body>        
