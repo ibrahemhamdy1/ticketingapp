@@ -20,26 +20,22 @@
                                 <table class="table table-bordered table-striped mb-none" id="datatable-default">
                                     <thead>
                                         <tr>
-                                            <th>Rendering engine</th>
-                                            <th>Browser</th>
-                                            <th>Platform(s)</th>
-                                            <th class="hidden-xs">Engine version</th>
-                                            <th class="hidden-xs">CSS grade</th>
+                                            <th data-field="id">ID</th>
+                                            <th data-field="company">Name</th>
+                                            <th data-field="company">Email</th>
+                                            @role(['admin'])
+                                            <th data-field="progress">Action</th>
+                                            @endrole
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Trident</td>
-                                            <td>Internet
-                                                Explorer 4.0
-                                            </td>
-                                            <td>Win 95+</td>
-                                            <td class="center hidden-xs">4</td>
-                                            <td class="center hidden-xs">X</td>
-                                        </tr>
+                                      @include('admin.users.loop')
+
                                         
                                     </tbody>
                                 </table>
+                                   {!! $rows->render() !!}
+
                             </div>
                         </section>
 

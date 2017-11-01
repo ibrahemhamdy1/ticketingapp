@@ -7,7 +7,7 @@
         <td>
             @role(['admin','salesManager','supportManager'])
             @if($row->id != 1 || Auth::user()->id == 1)
-                <a class="btn btn-default btn-rounded btn-sm" href="{{ url('controll/users/'.$row->id.'/edit') }}" ><span class="fa fa-pencil"></span></a>
+                <a class="mb-xs mt-xs mr-xs btn btn-warning" href="{{ url('controll/users/'.$row->id.'/edit') }}" ><span class="fa fa-pencil"></span></a>
             @endrole
                 <!--        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_{{ $row->id }}');"><span class="fa fa-times"></span></button>-->
                 @if($row->id != 1 )
