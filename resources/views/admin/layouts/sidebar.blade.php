@@ -37,7 +37,7 @@ here is  a sidebar
 
 				                    <li class="nav-parent nav-expanded nav-active">
 				                        <a >
-				                            <i class="fa fa-columns" aria-hidden="true"></i>
+				                            <i class="fa fa-users" aria-hidden="true"></i>
 				                            <span>Users</span>
 				                        </a>
 				                        <ul class="nav nav-children">
@@ -77,17 +77,42 @@ here is  a sidebar
 				                  @role(['admin'])
 				                    <li>
 				                        <a href="{{ url('controll/networks') }}">
-				                            <i class="fa fa-user-circle"></i>
+				                            <i class="fa fa-podcast"></i>
 				                            <span>ISP</span>
 				                        </a>
 				                      
 				                    </li>
 				                  @endrole
 				                  {{-- ISP --}}
-									{{-- category &&Packet --}}
 
 									{{--  --}}
-								  {{-- Ticket --}}
+								
+								{{-- category &&Packet --}}
+								@role('admin')
+									<li class="nav-parent">
+				                        <a >
+				                            <i class="glyphicon glyphicon-tags" aria-hidden="true"></i>
+				                            <span>Category</span>
+				                        </a>
+				                        <ul class="nav nav-children">
+				                            <li>
+				                                <a href="{{ url('controll/categories') }}">
+				                                   category
+				                                </a>
+				                            </li>
+				                            <li >
+				                                <a href="{{ url('controll/packets') }}">
+													Packet				                                
+												</a>
+				                               
+				                            </li>
+				                            
+				                        </ul>
+				                    </li>
+	            				@endrole
+		
+								{{-- category &&Packet --}}
+  {{-- Ticket --}}
 				                    <li class="nav-parent">
 				                        <a >
 				                            <i class="fa fa-tasks" aria-hidden="true"></i>
@@ -95,7 +120,7 @@ here is  a sidebar
 				                        </a>
 				                        <ul class="nav nav-children">
 				                            <li>
-				                                <a href="http://localhost/ticktingapp-Old/controll/tickets">
+				                                <a href="{{ url('controll/tickets') }}">
 				                                    All Tickets
 				                                </a>
 				                            </li>
@@ -109,7 +134,6 @@ here is  a sidebar
 				                        </ul>
 				                    </li>
 				    		       {{-- Ticket --}}
-
 				                	</ul>
 				                </li>
 				             </ul>
