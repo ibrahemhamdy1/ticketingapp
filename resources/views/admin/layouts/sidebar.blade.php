@@ -91,7 +91,7 @@ here is  a sidebar
 								@role('admin')
 									<li class="nav-parent">
 				                        <a >
-				                            <i class="fa fa-tasks" aria-hidden="true"></i>
+				                            <i class="fa fa-tag" aria-hidden="true"></i>
 				                            <span>Category</span>
 				                        </a>
 				                        <ul class="nav nav-children">
