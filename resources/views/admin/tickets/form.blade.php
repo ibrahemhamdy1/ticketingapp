@@ -13,75 +13,79 @@ $clientsss = $client->get();
  }
 //print_r($clients);die();
 ?>
+<div class="panel-body">  
 
 
-<div class="row">
-    <div class="loading-sub" style="display: none;">
-        <div class="progress">
-            <div class="indeterminate"></div>
-        </div>
-    </div>
+            <div class="form-group">
+                        <label class="control-label col-md-3">title</label>
+                            <div class="col-md-6">
+                                <section class="form-group-vertical">
+                                    <div class="input-group input-group-icon">
+                                        <span class="input-group-addon">
+                                            <span class="icon"><i class="fa fa-user"></i></span>
+                                        </span>
+                                        {!!Form::text('title', null,
+                                                 array('class'=>'materialize-textarea form-control','id'=>'title'))!!}
+                                        <label class="error">{{ $errors->first('title') }}</label>
 
+                                    </div>
+                                </section>
+                            </div>
+            </div>
+            <div class="form-group">
+                        <label class="control-label col-md-3">body</label>
+                            <div class="col-md-6">
+                                <section class="form-group-vertical">
+                                    <div class="input-group input-group-icon">
+                                        
+                                        {!!Form::textarea('body', null,
+                                                 array('class'=>'materialize-textarea form-control','data-live-search'=>'true','id'=>'body'))!!}
 
-    {{--=========================================--}}
-    <div class="card">
-        <div class="card-content">
-            <span class="card-title">Ticket Info</span>
-            <div class="row">
+                                        <label class="error">{{ $errors->first('body') }}</label>
 
-
-
-                <div class="input-field col s12">
-                    {!!Form::text('title', null,array('class'=>'materialize-textarea ','id'=>'title'))!!}
-                    <label class="active" for="title">title </label>
-                    <label class="error">{{ $errors->first('title') }}</label>
-                </div>
-
-
-                <div class="input-field col s12">
-                    {!!Form::textarea('body', null,array('class'=>'materialize-textarea ckeditor','id'=>'body'))!!}
-                    <label class="active" for="body">body </label>
-                    <label class="error">{{ $errors->first('body') }}</label>
-                </div>
-
-
-                {{--========department type===================--}}
-
-                <?php
+                                    </div>
+                                </section>
+                            </div>
+            </div>
+             {{--========department type===================--}}
+            <?php
                 $type = [
                         0 => 'sales',
                         1 => "supports",
                 ];
-                ?>
+            ?>
 
-                <div class="input-field col s12">
+
+            <div class="form-group">
+                        <label class="control-label col-md-3">type</label>
+                            <div class="col-md-6">
+                                <section class="form-group-vertical">
+                                    <div class="input-group input-group-icon">
                     {{  Form::select('type', $type, null, ['placeholder' => 'Department','class'=>'form-control ','id'=>'type',])}}
-
-                    <label for="type">Department</label>
-                </div>
-
-
-                {{--=============================--}}
-
-                <div class="input-field col s12">
-                    {{  Form::select('client_id', $clients, null, ['placeholder' => 'client','class'=>'form-control ','id'=>'client_id',])}}
-
-                    <label for="client_id">cient</label>
-                </div>
-
-                {{--==========================--}}
-
-
+                                    </div>
+                                </section>
+                            </div>
             </div>
-        </div>
-    </div>
+
+             {{--========department type===================--}}
+
+            <div class="form-group">
+                        <label class="control-label col-md-3">cient</label>
+                            <div class="col-md-6">
+                                <section class="form-group-vertical">
+                                    <div class="input-group input-group-icon">
+                                        {{  Form::select('client_id', $clients, null,
+                                                  ['placeholder' => 'client','class'=>'form-control ','id'=>'client_id',])}}
+                                    </div>
+                                </section>
+                            </div>
+            </div>
 
 
-    <div class="loading-sub" style="display: none;">
-        <div class="progress">
-            <div class="indeterminate"></div>
-        </div>
-    </div>
+                
+                
+               
+<div  class="text-center"> 
+        {!! Form::submit($submitButton, array('class'=>'btn btn-primary text-center','id' => 'submit')) !!}
 </div>
-
-{!! Form::submit($submitButton, array('class'=>'btn btn-primary text-center','id' => 'submit')) !!}
+</div>

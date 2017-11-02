@@ -7,60 +7,86 @@ $categories = $category->pluck('name', 'id');
 
 ?>
 
-
-<div class="row">
-    <div class="loading-sub" style="display: none;">
-        <div class="progress">
-            <div class="indeterminate"></div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-content">
-            <span class="card-title">Packet Info</span>
-            <div class="row">
+<div class="panel-body">  
 
 
+            <div class="form-group">
+                        <label class="control-label col-md-3">Name</label>
+                            <div class="col-md-6">
+                                <section class="form-group-vertical">
+                                    <div class="input-group input-group-icon">
+                                        <span class="input-group-addon">
+                                            <span class="icon"><i class="fa fa-user"></i></span>
+                                        </span>
+                                            {!!Form::text('name', null,array('class'=>'validate form-control','id'=>'name'))!!}
 
-                {{--======================name===================--}}
-                <div class="input-field col s6">
-                    {!!Form::text('name', null,array('class'=>'validate','id'=>'name'))!!}
-                    <label class="active" for="name">Name</label>
-                </div>
+                                    </div>
+                                </section>
+                            </div>
+            </div>
 
-                <div class="input-field col s6">
-                    {!!Form::text('price', null,array('class'=>'validate','id'=>'price'))!!}
-                    <label class="active" for="price">price</label>
-                </div>
+            <div class="form-group">
+                        <label class="control-label col-md-3">price</label>
+                            <div class="col-md-6">
+                                <section class="form-group-vertical">
+                                    <div class="input-group input-group-icon">
+                                        <span class="input-group-addon">
+                                            <span class="icon"><i class="fa fa-dollar"></i></span>
+                                        </span>
+                                            {!!Form::text('price', null,array('class'=>'validate form-control','id'=>'price'))!!}
 
-                <div class="input-field col s6">
-                    {!!Form::text('type', null,array('class'=>'validate','id'=>'type'))!!}
-                    <label class="active" for="type">type</label>
-                </div>
+                                    </div>
+                                </section>
+                            </div>
+            </div>
+            <div class="form-group">
+                        <label class="control-label col-md-3">type</label>
+                            <div class="col-md-6">
+                                <section class="form-group-vertical">
+                                    <div class="input-group input-group-icon">
+                                        <span class="input-group-addon">
+                                            <span class="icon"><i class="fa fa-th-large"></i></span>
+                                        </span>
+                    {!!Form::text('type', null,array('class'=>'validate form-control','id'=>'type'))!!}
 
+                                    </div>
+                                </section>
+                            </div>
+            </div>
 
 
 
                 <?php
-                $has = [
-                        0 => 'sale',
-                        1 => "no sale",
-                ];
+                        $has = [
+                                0 => 'sale',
+                                1 => "no sale",
+                        ];
                 ?>
+            <div class="form-group">
+                        <label class="control-label col-md-3">sale</label>
+                            <div class="col-md-6">
+                                <section class="form-group-vertical">
+                                    <div class="input-group input-group-icon">
+                                        
+                    {{  Form::select('sale', $has, null, ['placeholder' => 'sale','class'=>'form-control form-control','id'=>'sale',])}}
 
-                <div class="input-field col s6">
-                    {{  Form::select('sale', $has, null, ['placeholder' => 'sale','class'=>'form-control','id'=>'sale',])}}
-
-                    <label for="sale">sale</label>
-                </div>
-{{--=======================================cat_id======================--}}
-
-                <div class="input-field col s6">
-                    {{  Form::select('cat_id', $categories, null, ['placeholder' => 'category','class'=>'form-control','id'=>'cat_id',])}}
-
-                    <label for="cat_id">category</label>
-                </div>
+                                    </div>
+                                </section>
+                            </div>
+            </div>            
 
 
+                    <div class="form-group">
+                        <label class="control-label col-md-3">categories</label>
+                            <div class="col-md-6">
+                                <section class="form-group-vertical">
+                                    <div class="input-group input-group-icon">
+                                        {{  Form::select('cat_id', $categories, null, ['placeholder' => 'category','class'=>'form-control','id'=>'cat_id',])}}
+
+                                    </div>
+                                </section>
+                            </div>
+                    </div>            
                 <?php
                 $limit = [
                         0 => 'limited',
@@ -68,24 +94,20 @@ $categories = $category->pluck('name', 'id');
                 ];
                 ?>
 
-                <div class="input-field col s6">
-                    {{  Form::select('limited', $limit, null, ['placeholder' => 'type','class'=>'form-control','id'=>'limited',])}}
 
-                    <label for="limited">Type</label>
-                </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">type</label>
+                            <div class="col-md-6">
+                                <section class="form-group-vertical">
+                                    <div class="input-group input-group-icon">
+                                        {{  Form::select('limited', $limit, null, ['placeholder' => 'type','class'=>'form-control','id'=>'limited',])}}
 
-
-
-
-            </div>
+                                    </div>
+                                </section>
+                            </div>
+                    </div>            
+        <div class="text-center">
+            {!! Form::submit($submitButton, array('class'=>'btn btn-primary text-center','id' => 'submit')) !!}
+            
         </div>
-    </div>
-
-    <div class="loading-sub" style="display: none;">
-        <div class="progress">
-            <div class="indeterminate"></div>
-        </div>
-    </div>
 </div>
-
-{!! Form::submit($submitButton, array('class'=>'btn btn-primary text-center','id' => 'submit')) !!}

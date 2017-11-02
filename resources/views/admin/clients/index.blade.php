@@ -7,19 +7,18 @@
 
 @endsection
 <!-- start: page -->
-  <a class="btn btn-default btn-rounded btn-sm" href="{{ url('controll/importExport')}}"><i class="material-icons">IMPORT</i></a>
-    <div class="fixed-action-btn">
-        <a class="btn-floating btn-large red"  href="{{ url('controll/clients/create')}}">
-            <i class="btn btn-success" >add</i>
-        </a>
-    </div>
+  
 
 
                         <section class="panel">
                             <header class="panel-heading">
                                 <div class="panel-actions">
-                                    <a href="#" class="panel-action panel-action-toggle" data-panel-toggle></a>
-                                    <a href="#" class="panel-action panel-action-dismiss" data-panel-dismiss></a>
+                                    <a   href="{{ url('controll/clients/create')}}"> 
+                                        <button class="btn btn-success" >Add New</button> 
+                                   </a>
+                                   <a   href="{{ url('controll/importExport')}}"> 
+                                        <button class="mb-xs mt-xs mr-xs btn btn-info" >IMPORT</button> 
+                                   </a>
                                 </div>
                         
                                 <h2 class="panel-title">Basic</h2>

@@ -84,7 +84,7 @@ $role2 = auth()->user()->roles()->first()->name;
                     <section class="form-group-vertical">
                         <div class="input-group input-group-icon">
                             <span class="input-group-addon">
-                                <span class="icon"><i class="fa fa-user"></i></span>
+                                <span class="icon"><i class="fa fa-key"></i></span>
                             </span>
                             <input class="validate form-control" type="password" placeholder="Password Confirmation" id="password_confirmation" name="password_confirmation">
                             <label class="error">{{ $errors->first('password_confirmation') }}</label>
@@ -94,6 +94,8 @@ $role2 = auth()->user()->roles()->first()->name;
                 </div>
         </div>
     </div>
+
+    {!! Form::submit($submitButton, array('class'=>'btn btn-success text-center','id' => 'submit','style'=>'margin:30px')) !!}
+
 </div>  
 
-{!! Form::submit($submitButton, array('class'=>'btn btn-success text-center','id' => 'submit','style'=>'margin:30px')) !!}

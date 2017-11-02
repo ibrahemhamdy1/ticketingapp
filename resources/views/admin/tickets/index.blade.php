@@ -1,40 +1,108 @@
 @extends('admin.main')
 @section('content')
- <div class="fixed-action-btn">
 
-     @role(['admin','sales','salesManager'])
-    <a class="btn-floating btn-large red"  href="{{ url('controll/tickets/create')}}">
-        <i class="large material-icons" >add</i>
-    </a>
-     @endrole
-</div>
-<div class="card invoices-card">
-    <div class="card-content">
-        <div class="card-options">
-            {!! Form::open(['method' => 'get', 'class' => 'searchForm']) !!}
-            <input type="text" name="value"  value="{{request()->input('value')}}" class="expand-search searchInput " placeholder="Search" autocomplete="off" >
-            {!! Form::close() !!}
-        </div>
-        <span class="card-title">Pages</span>
-        <table class="responsive-table bordered">
-            <thead>
-                <tr>
-                    <th data-field="id">ID</th>
+@section('header')
+<link type="text/css" rel="stylesheet" 
+    href="{{ asset('admin-assets/assets/vendor/jquery-datatables-bs3/assets/css/datatables.css')}}"/>
 
-                    <th data-field="company">title</th>
-                    <th data-field="company">status</th>
-                    <th data-field="company">Department</th>
+<link type="text/css" rel="stylesheet" 
+    href="{{ asset('admin-assets/assets/vendor/select2-bootstrap-theme/select2-bootstrap.min.css')}}"/>
+    <link type="text/css" rel="stylesheet" 
+    href="{{ asset('admin-assets/assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css')}}"/>
 
-                    @role(['admin'])
-                    <th data-field="progress">Action</th>
-                    @endrole
-                </tr>
-            </thead>
-            <tbody class="data">
-                @include('admin.tickets.loop')
-            </tbody>
-        </table>
-        {!! $rows->render() !!}
-    </div>
-</div>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
+@endsection
+<!-- start: page -->
+  
+
+
+                        <section class="panel">
+                            <header class="panel-heading">
+                                <div class="panel-actions">
+                                    <a   href="{{ url('controll/tickets/create')}}"> 
+                                        <button class="btn btn-success" >Add New</button> 
+                                   </a>
+                                   
+                                </div>
+                        
+                                <h2 class="panel-title">Basic</h2>
+                            </header>
+                            <div class="panel-body">
+                                <table class="table table-bordered table-striped mb-none" id="datatable-default">
+                                        <thead>
+                                            <tr>
+                                                <th data-field="id">ID</th>
+
+                                                <th data-field="company">title</th>
+                                                <th data-field="company">status</th>
+                                                <th data-field="company">Department</th>
+
+                                                @role(['admin'])
+                                                <th data-field="progress">Action</th>
+                                                @endrole
+                                            </tr>
+                                        </thead>                                    
+                                        <tbody>
+                                            @include('admin.tickets.loop')
+
+                                        
+                                        </tbody>
+                                </table>
+                                   {!! $rows->render() !!}
+
+                            </div>
+                        </section>
+
+@endsection
+
+@section('script')
+
+
+
+<script src="{{ asset('admin-assets/assets/vendor/select2/js/select2.js')}}"></script>
+
+ <script src="{{ asset('admin-assets/assets/vendor/jquery-datatables/media/js/jquery.dataTables.js')}}"></script>
+    
+<script src="{{ asset('admin-assets/assets/vendor/jquery-datatables/extras/TableTools/js/dataTables.tableTools.min.js')}}
+"></script>
+        
+                <script src="{{ asset('admin-assets/assets/vendor/jquery-datatables-bs3/assets/js/datatables.js')}}
+"></script>
+
+
+
+
+<script src="{{ asset('admin-assets/assets/javascripts/tables/examples.datatables.default.js')}}"></script>
+
+<script src="{{asset('admin-assets/assets/javascripts/tables/examples.datatables.row.with.details.js')}}"></script>
+<script src="{{ asset('admin-assets/assets/javascripts/tables/examples.datatables.tabletools.js')}}"></script>
+
+
+{{-- NEW  SCRIPT --}}
+<script src="{{asset('admin-assets/assets/vendor/jqueryui-touch-punch/jqueryui-touch-punch.js')}}"></script>
+<script src="{{asset('admin-assets/assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js')}}"></script>
+
+
+<script src="{{asset('admin-assets/assets/vendor/jquery-maskedinput/jquery.maskedinput.js')}}"></script>
+<script src="{{asset('admin-assets/assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js')}}"></script>
+
+<script src="{{asset('admin-assets/assets/vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.js')}}"></script>
+<script src="{{asset('admin-assets/assets/javascripts/forms/examples.advanced.form.js')}}"></script>
+
+
+{{-- done  SCRIPT --}}
+
+<script> 
+$('.selectpicker').selectpicker({
+  style: 'btn-info',
+  size: 4
+});
+ </script>
 @endsection
