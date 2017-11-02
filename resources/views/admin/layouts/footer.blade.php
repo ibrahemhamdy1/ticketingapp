@@ -13,12 +13,13 @@
 <!-- Vendor -->
 <script src="{{ asset('admin-assets/assets/vendor/jquery/jquery.js')}}"></script>
 <script src="{{ asset('admin-assets/assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js')}}"></script>
-<script src="{{ asset('admin-assets/assets/vendor/bootstrap/js/bootstrap.js')}}"></script>
-<script src="{{ asset('admin-assets/assets/vendor/nanoscroller/nanoscroller.js')}}"></script>
-<script src="{{ asset('admin-assets/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js')}}"></script>
 <script src="{{ asset('admin-assets/assets/vendor/magnific-popup/jquery.magnific-popup.js')}}"></script>
 <script src="{{ asset('admin-assets/assets/vendor/jquery-placeholder/jquery-placeholder.js')}}"></script>
 <script src="{{ asset('admin-assets/assets/vendor/jquery-appear/jquery-appear.js')}}"></script>
+
+<script src="{{ asset('admin-assets/assets/vendor/bootstrap/js/bootstrap.js')}}"></script>
+<script src="{{ asset('admin-assets/assets/vendor/nanoscroller/nanoscroller.js')}}"></script>
+<script src="{{ asset('admin-assets/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js')}}"></script>
 <script src="{{ asset('admin-assets/assets/vendor/owl.carousel/owl.carousel.js')}}"></script>
 		<!-- Specific Page Vendor -->
 

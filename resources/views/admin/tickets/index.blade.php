@@ -18,11 +18,27 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
 
 <!-- (Optional) Latest compiled and minified JavaScript translation files -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
+ --}}
 
+ 
 @endsection
 <!-- start: page -->
-  
+  <select data-plugin-selectTwo class="form-control populate ">
+                                                        <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                            <option value="AK">Alaska</option>
+                                                            <option value="HI">Hawaii</option>
+                                                        </optgroup>
+                                                        <optgroup label="Pacific Time Zone">
+                                                            <option value="CA">California</option>
+                                                            <option value="NV">Nevada</option>
+                                                            <option value="OR">Oregon</option>
+                                                            <option value="WA">Washington</option>
+                                                        </optgroup>
+                                                        
+                                                        
+                                                        
+                                                    </select>
 
 
                         <section class="panel">
@@ -67,8 +83,9 @@
 @endsection
 
 @section('script')
-    <script src="{{ asset('admin-assets/assets/vendor/select2/js/select2.js')}}"></script>
     <script src="{{ asset('admin-assets/assets/vendor/jquery-datatables/media/js/jquery.dataTables.js')}}"></script>
+
+    <script src="{{ asset('admin-assets/assets/vendor/select2/js/select2.js')}}"></script>
     <script 
         src="{{ asset('admin-assets/assets/vendor/jquery-datatables/extras/TableTools/js/dataTables.tableTools.min.js')}}">
     </script>
