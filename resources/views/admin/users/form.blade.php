@@ -94,8 +94,8 @@ $role2 = auth()->user()->roles()->first()->name;
                 </div>
         </div>
     </div>
-
+<div class="text-center">
     {!! Form::submit($submitButton, array('class'=>'btn btn-success text-center','id' => 'submit','style'=>'margin:30px')) !!}
-
+</div>
 </div>  
 

@@ -11,22 +11,22 @@
 @section('content')
 
 @section('header')
-<link type="text/css" rel="stylesheet" 
-    href="{{ asset('admin-assets/assets/vendor/jquery-datatables-bs3/assets/css/datatables.css')}}"/>
-
-<link type="text/css" rel="stylesheet" 
-    href="{{ asset('admin-assets/assets/vendor/select2-bootstrap-theme/select2-bootstrap.min.css')}}"/>
     <link type="text/css" rel="stylesheet" 
-    href="{{ asset('admin-assets/assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css')}}"/>
+        href="{{ asset('admin-assets/assets/vendor/jquery-datatables-bs3/assets/css/datatables.css')}}"/>
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    <link type="text/css" rel="stylesheet" 
+        href="{{ asset('admin-assets/assets/vendor/select2-bootstrap-theme/select2-bootstrap.min.css')}}"/>
+        <link type="text/css" rel="stylesheet" 
+        href="{{ asset('admin-assets/assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css')}}"/>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
 
-<!-- (Optional) Latest compiled and minified JavaScript translation files -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
 @endsection
 
 
@@ -245,7 +245,7 @@
 <div class="panel-body">
 
              <section class="panel">
-                            <div class="text-center"> <h1>Tickit</h1></div>
+                            <div class="text-center"> <h1 class="text-info">Tickit</h1></div>
                             <div class="row">
                                 <div class="col-md-6 text-center">
 
@@ -326,7 +326,7 @@
                         {{--====================== Comment========================--}}
             <div class="text-center">
                             <div class="divider mailbox-divider"></div>
-                            <h4 style="color:#0a91ff; ">Comments</h4>
+                            <h4 class="text-info">Comments</h4>
                             <div class="divider mailbox-divider"></div>
                             <div class="mailbox-text">
 
@@ -336,15 +336,17 @@
 
                             @foreach($m->comments as $item)
 
-                                <div>
+                                <div class="panel-body">
                                     <span>@if($item->user){{$item->user->name}} ({{$item->user->roles()->first()->display_name}}) 
                                         @else unknown
                                         @endif:
                                     </span> 
                                     {{$item->comment}}   
+                                
+                                    <span><i class="fa fa-clock-o"></i>{{$item->created_at}}</span>
+                                    <div class="divider mailbox-divider"></div>
                                 </div>
-                                <span><i class="fa fa-clock-o"></i>{{$item->created_at}}</span>
-                                <div class="divider mailbox-divider"></div>
+                                <hr>
                             @endforeach
 
 

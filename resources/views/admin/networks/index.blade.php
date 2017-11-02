@@ -4,22 +4,22 @@
 @section('header')
 <link type="text/css" rel="stylesheet" 
     href="{{ asset('admin-assets/assets/vendor/jquery-datatables-bs3/assets/css/datatables.css')}}"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
 
 @endsection
 <!-- start: page -->
   
-    <div class="fixed-action-btn">
-        <a class="btn-floating btn-large red"  href="{{ url('controll/networks/create')}}">
-            <i class="btn btn-success" >add</i>
-        </a>
-    </div>
+
 
 
                         <section class="panel">
                             <header class="panel-heading">
                                 <div class="panel-actions">
-                                    <a href="#" class="panel-action panel-action-toggle" data-panel-toggle></a>
-                                    <a href="#" class="panel-action panel-action-dismiss" data-panel-dismiss></a>
+                                        <div class="fixed-action-btn">
+                                            <a class="btn-floating btn-large red"  href="{{ url('controll/networks/create')}}">
+                                                <i class="btn btn-success" >add</i>
+                                            </a>
+                                        </div>
                                 </div>
                         
                                 <h2 class="panel-title">Basic</h2>

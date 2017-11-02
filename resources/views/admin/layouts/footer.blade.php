@@ -43,6 +43,12 @@ $(document).ready(function(){
    
 });
 </script>
+<script> 
+        $(document).ready(function() {
+            $('#datatable-default').DataTable();
+            $('#datatable-default_filter input').addClass('form-control')
+        } );
+    </script>
 @yield('script')
 </body>
 </html>

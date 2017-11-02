@@ -124,12 +124,15 @@ here is  a sidebar
 				                                    All Tickets
 				                                </a>
 				                            </li>
-				                            <li >
+										{{-- My Tickets  --}}
+										  @role(['sales','salesManager','supportManager'])
+				                            <li>
 				                                <a href="http://localhost/ticktingapp-Old/controll/my-ticket">
 				                                   My Tickets 
 				                                </a>
 				                               
 				                            </li>
+                                          @endrole
 				                            
 				                        </ul>
 				                    </li>
