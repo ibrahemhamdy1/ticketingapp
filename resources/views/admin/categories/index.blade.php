@@ -11,7 +11,7 @@
     
 
 
-                        <section class="panel">
+                        <section class="panel text-center">
                             <header class="panel-heading">
                                 <div class="panel-actions">
                                     <a  href="{{ url('controll/categories/create')}}"> 
@@ -19,10 +19,10 @@
                                    </a>
                                 </div>
                         
-                                <h2 class="panel-title">Basic</h2>
+                                <h2 class="panel-title">Categories</h2>
                             </header>
                             <div class="panel-body">
-                                <table class="table table-bordered table-striped mb-none" id="datatable-default">
+                                <table class="table table-bordered table-striped mb-none " id="datatable-default">
                                                 <thead>
                                     <tr>
                                         <th data-field="id">ID</th>
@@ -65,4 +65,5 @@
 
 <script src="{{asset('admin-assets/assets/javascripts/tables/examples.datatables.row.with.details.js')}}"></script>
 <script src="{{ asset('admin-assets/assets/javascripts/tables/examples.datatables.tabletools.js')}}"></script>
+
 @endsection

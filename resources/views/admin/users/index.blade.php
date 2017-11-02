@@ -12,7 +12,7 @@
                                 <div class="panel-actions">
                                 </div>
                         
-                                <h2 class="panel-title">Basic</h2>
+                                <h2 class="panel-title">Users</h2>
                             </header>
                             <div class="panel-body">
                                 <table class="table table-bordered table-striped mb-none" id="datatable-default">

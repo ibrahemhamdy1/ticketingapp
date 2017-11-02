@@ -36,7 +36,7 @@
                                 @endrole 
                                 </div>
                         
-                                <h2 class="panel-title">Basic</h2>
+                                <h2 class="panel-title">Tickets</h2>
                             </header>
                             <div class="panel-body">
                                 <table class="table table-striped table-bordered" id="datatable-default">

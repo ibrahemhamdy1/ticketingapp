@@ -10,9 +10,9 @@
 
 
     <td>
-        <a class="btn btn-default btn-rounded btn-sm" href="{{ url('controll/tickets/'.$row->id) }}" ><span class="fa fa-pencil">view</span></a>
+        <a class="btn btn-info btn-rounded btn-sm" href="{{ url('controll/tickets/'.$row->id) }}" ><span class="fa fa-pencil">view</span></a>
         @role(['admin','salesManager'])
-        <a class="btn btn-default btn-rounded btn-sm" href="{{ url('controll/tickets/'.$row->id.'/edit') }}" ><span class="fa fa-pencil"></span></a>
+        <a class="mb-xs mt-xs mr-xs btn btn-warning" href="{{ url('controll/tickets/'.$row->id.'/edit') }}" ><span class="fa fa-pencil"></span></a>
         @endrole
         <!--
        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_{{ $row->id }}');"><span class="fa fa-times"></span></button>-->

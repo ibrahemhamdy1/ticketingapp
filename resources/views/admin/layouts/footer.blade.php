@@ -47,6 +47,9 @@ $(document).ready(function(){
         $(document).ready(function() {
             $('#datatable-default').DataTable();
             $('#datatable-default_filter input').addClass('form-control')
+            $('#datatable-default_filter input').css('width','100%');
+        	$('td,th').addClass('text-center');
+    
         } );
     </script>
 @yield('script')

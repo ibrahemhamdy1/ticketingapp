@@ -35,12 +35,12 @@ class ClientController extends Controller {
     {
 //        return auth()->user();
         if (is_null($this->request->value)) {//
-            $rows = $this->model->paginate(25);
+            $rows = $this->model->paginate(400);
         } else {
 
             $this->request->flash();
             $rows = $this->model->where('name', 'like', "%{$this->request->value}%")
-                ->paginate(25);
+                ->paginate(400);
         }
 
 //           return $rows;
