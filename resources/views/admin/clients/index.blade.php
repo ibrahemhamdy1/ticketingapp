@@ -21,7 +21,7 @@
                                    </a>
                                 </div>
 
-                                <h2 class="panel-title">Client</h2>
+                                <h2 class="panel-title">Clients</h2>
                             </header>
                             <div class="panel-body">
                                 <table class="table table-bordered table-striped mb-none" id="datatable-default">

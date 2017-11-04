@@ -35,9 +35,9 @@ here is  a sidebar
 					             {{-- Users --}}
 				                 @role(['admin','salesManager','supportManager'])
 
-				                    <li class="nav-parent nav-expanded nav-active">
+				                    <li class="nav-parent nav-expanded ">
 				                        <a >
-				                            <i class="fa fa-columns" aria-hidden="true"></i>
+				                            <i class="fa fa-user" aria-hidden="true"></i>
 				                            <span>Users</span>
 				                        </a>
 				                        <ul class="nav nav-children">
@@ -102,7 +102,7 @@ here is  a sidebar
 				                            </li>
 				                            <li >
 				                                <a href="{{ url('controll/packets') }}">
-													Packet
+													Packets
 												</a>
 
 				                            </li>

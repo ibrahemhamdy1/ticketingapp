@@ -10,7 +10,7 @@
 
         <td>
             @role(['admin','salesManager','sales'])
-            <a class="btn btn-default btn-rounded btn-sm" href="{{ url('controll/clients/'.$row->id.'/edit') }}" ><span class="fa fa-pencil"></span></a>
+            <a  class="btn btn-warning btn-rounded btn-sm editclientMargin" href="{{ url('controll/clients/'.$row->id.'/edit') }}" ><span class="fa fa-pencil"></span></a>
             @endrole
             <!--
        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_{{ $row->id }}');"><span class="fa fa-times"></span></button>-->
