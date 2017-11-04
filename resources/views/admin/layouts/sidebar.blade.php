@@ -35,7 +35,7 @@ here is  a sidebar
 					             {{-- Users --}}
 				                 @role(['admin','salesManager','supportManager'])
 
-				                    <li class="nav-parent nav-expanded ">
+				                    <li class="nav-parent  ">
 				                        <a >
 				                            <i class="fa fa-user" aria-hidden="true"></i>
 				                            <span>Users</span>
