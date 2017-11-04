@@ -11,7 +11,7 @@ here is  a sidebar
 
 <!-- start: sidebar -->
 				<aside id="sidebar-left" class="sidebar-left">
-				
+
 				    <div class="sidebar-header">
 				        <div class="sidebar-title">
 				            Navigation
@@ -20,17 +20,17 @@ here is  a sidebar
 				            <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
 				        </div>
 				    </div>
-				
+
 				    <div class="nano">
 				        <div class="nano-content">
 				            <nav id="menu" class="nav-main" role="navigation">
-				            
+
 				                <ul class="nav nav-main">
 				                    <li>
 				                        <a href="{{ url('/controll/dashboard') }}">
 				                            <i class="fa fa-home" aria-hidden="true"></i>
 				                            <span>Dashboard</span>
-				                        </a>                        
+				                        </a>
 				                    </li>
 					             {{-- Users --}}
 				                 @role(['admin','salesManager','supportManager'])
@@ -52,7 +52,7 @@ here is  a sidebar
 				                                   Add User
 				                                </a>
 				                            </li>
-				                           
+
 				                        </ul>
 				                    </li>
 				                 @endrole
@@ -65,7 +65,7 @@ here is  a sidebar
 				                            <i class="fa fa-user-circle"></i>
 				                            <span>Clients</span>
 				                        </a>
-				                      
+
 				                    </li>
 				                   @endrole
 
@@ -80,13 +80,13 @@ here is  a sidebar
 				                            <i class="fa fa-podcast"></i>
 				                            <span>ISP</span>
 				                        </a>
-				                      
+
 				                    </li>
 				                  @endrole
 				                  {{-- ISP --}}
 
 									{{--  --}}
-								
+
 								{{-- category &&Packet --}}
 								@role('admin')
 									<li class="nav-parent">
@@ -102,15 +102,15 @@ here is  a sidebar
 				                            </li>
 				                            <li >
 				                                <a href="{{ url('controll/packets') }}">
-													Packet				                                
+													Packet
 												</a>
-				                               
+
 				                            </li>
-				                            
+
 				                        </ul>
 				                    </li>
 	            				@endrole
-		
+
 								{{-- category &&Packet --}}
   {{-- Ticket --}}
 				                    <li class="nav-parent">
@@ -127,13 +127,13 @@ here is  a sidebar
 										{{-- My Tickets  --}}
 										  @role(['sales','salesManager','supportManager'])
 				                            <li>
-				                                <a href="http://localhost/ticktingapp-Old/controll/my-ticket">
-				                                   My Tickets 
+				                                <a href="{{url('controll/my-ticket')}}">
+				                                   My Tickets
 				                                </a>
-				                               
+
 				                            </li>
                                           @endrole
-				                            
+
 				                        </ul>
 				                    </li>
 				    		       {{-- Ticket --}}
@@ -141,26 +141,26 @@ here is  a sidebar
 				                </li>
 				             </ul>
 				          </li>
-				
+
 				     </ul>
 			  </nav>
-				
-				            
-				
+
+
+
 				        <script>
 				            // Maintain Scroll Position
 				            if (typeof localStorage !== 'undefined') {
 				                if (localStorage.getItem('sidebar-left-position') !== null) {
 				                    var initialPosition = localStorage.getItem('sidebar-left-position'),
 				                        sidebarLeft = document.querySelector('#sidebar-left .nano-content');
-				                    
+
 				                    sidebarLeft.scrollTop = initialPosition;
 				                }
 				            }
 				        </script>
-				        
-				
+
+
 				    </div>
-				
+
 				</aside>
 				<!-- end: sidebar -->

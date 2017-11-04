@@ -2,7 +2,7 @@
 @section('content')
 
 @section('header')
-<link type="text/css" rel="stylesheet" 
+<link type="text/css" rel="stylesheet"
     href="{{ asset('admin-assets/assets/vendor/jquery-datatables-bs3/assets/css/datatables.css')}}"/>
 
 @endsection
@@ -11,7 +11,7 @@
                             <header class="panel-heading">
                                 <div class="panel-actions">
                                 </div>
-                        
+
                                 <h2 class="panel-title">Users</h2>
                             </header>
                             <div class="panel-body">
@@ -21,7 +21,7 @@
                                             <th data-field="id">ID</th>
                                             <th data-field="company">Name</th>
                                             <th data-field="company">Email</th>
-                                            @role(['admin'])
+                                            @role(['admin','salesManager','supportManager'])
                                             <th data-field="progress">Action</th>
                                             @endrole
                                         </tr>
@@ -29,7 +29,7 @@
                                     <tbody>
                                       @include('admin.users.loop')
 
-                                        
+
                                     </tbody>
                                 </table>
                                    {!! $rows->render() !!}
@@ -46,10 +46,10 @@
 <script src="{{ asset('admin-assets/assets/vendor/select2/js/select2.js')}}"></script>
 
  <script src="{{ asset('admin-assets/assets/vendor/jquery-datatables/media/js/jquery.dataTables.js')}}"></script>
-    
+
 <script src="{{ asset('admin-assets/assets/vendor/jquery-datatables/extras/TableTools/js/dataTables.tableTools.min.js')}}
 "></script>
-        
+
                 <script src="{{ asset('admin-assets/assets/vendor/jquery-datatables-bs3/assets/js/datatables.js')}}
 "></script>
 

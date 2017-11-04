@@ -3,12 +3,12 @@
 
 @section('header')
 
-<link type="text/css" rel="stylesheet" 
+<link type="text/css" rel="stylesheet"
     href="{{ asset('admin-assets/assets/vendor/jquery-datatables-bs3/assets/css/datatables.css')}}"/>
 
-<link type="text/css" rel="stylesheet" 
+<link type="text/css" rel="stylesheet"
     href="{{ asset('admin-assets/assets/vendor/select2-bootstrap-theme/select2-bootstrap.min.css')}}"/>
-    <link type="text/css" rel="stylesheet" 
+    <link type="text/css" rel="stylesheet"
     href="{{ asset('admin-assets/assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css')}}"/>
 
 <!-- Latest compiled and minified CSS -->
@@ -21,10 +21,10 @@
 {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
  --}}
 
- 
+
 @endsection
 <!-- start: page -->
-  <select data-plugin-selectTwo class="form-control populate ">
+  <!-- <select data-plugin-selectTwo class="form-control populate ">
                                                         <optgroup label="Alaskan/Hawaiian Time Zone">
                                                             <option value="AK">Alaska</option>
                                                             <option value="HI">Hawaii</option>
@@ -35,10 +35,10 @@
                                                             <option value="OR">Oregon</option>
                                                             <option value="WA">Washington</option>
                                                         </optgroup>
-                                                        
-                                                        
-                                                        
-                                                    </select>
+
+
+
+                                                    </select> -->
 
 
                         <section class="panel">
@@ -46,12 +46,12 @@
                                 <div class="panel-actions">
                                 @role(['admin','sales','salesManager'])
 
-                                    <a   href="{{ url('controll/tickets/create')}}"> 
-                                        <button class="btn btn-success" >Add New</button> 
+                                    <a   href="{{ url('controll/tickets/create')}}">
+                                        <button class="btn btn-success" >Add New</button>
                                    </a>
-                                @endrole 
+                                @endrole
                                 </div>
-                        
+
                                 <h2 class="panel-title">Tickets</h2>
                             </header>
                             <div class="panel-body">
@@ -64,15 +64,15 @@
                                                 <th data-field="company">status</th>
                                                 <th data-field="company">Department</th>
 
-                                                @role(['admin'])
+                                                @role(['admin','salesManager','supportManager','sales'])
                                                 <th data-field="progress">Action</th>
                                                 @endrole
                                             </tr>
-                                        </thead>                                    
+                                        </thead>
                                         <tbody>
                                             @include('admin.tickets.loop')
 
-                                        
+
                                         </tbody>
                                 </table>
                                    {!! $rows->render() !!}
@@ -86,7 +86,7 @@
     <script src="{{ asset('admin-assets/assets/vendor/jquery-datatables/media/js/jquery.dataTables.js')}}"></script>
 
     <script src="{{ asset('admin-assets/assets/vendor/select2/js/select2.js')}}"></script>
-    <script 
+    <script
         src="{{ asset('admin-assets/assets/vendor/jquery-datatables/extras/TableTools/js/dataTables.tableTools.min.js')}}">
     </script>
     <script src="{{ asset('admin-assets/assets/vendor/jquery-datatables-bs3/assets/js/datatables.js')}}"></script>
@@ -102,5 +102,5 @@
     <script src="{{asset('admin-assets/assets/javascripts/forms/examples.advanced.form.js')}}"></script>
     {{-- done  SCRIPT --}}
 
-    
+
 @endsection

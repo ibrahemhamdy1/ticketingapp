@@ -9,3 +9,7 @@
 .submitCreatUser{
 	margin: 30px;
 }
+
+.header{
+	border-top: 0;
+}
