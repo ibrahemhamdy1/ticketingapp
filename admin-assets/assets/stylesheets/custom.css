@@ -13,3 +13,20 @@
 .header{
 	border-top: 0;
 }
+
+
+/*dashboard*/
+.summary{
+	padding: 20px;
+}
+
+.boxNumbers{
+	margin-bottom: 50px;
+}
+
+.greenBox{
+	background-color: #2ECC71 !important ;
+}
+.orangBox{
+	background-color: #F89406 !important;
+}

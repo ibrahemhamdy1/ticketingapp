@@ -115,7 +115,7 @@ here is  a sidebar
   {{-- Ticket --}}
 				                    <li class="nav-parent">
 				                        <a >
-				                            <i class="fa fa-tasks" aria-hidden="true"></i>
+				                            <i class="fa  fa-ticket" aria-hidden="true"></i>
 				                            <span>Ticket</span>
 				                        </a>
 				                        <ul class="nav nav-children">

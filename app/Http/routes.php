@@ -1,4 +1,12 @@
 <?php
+use App\User;
+use App\Client;
+use App\Network;
+use App\Category;
+use App\Packet;
+use App\Ticket;
+
+//use Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,11 +68,20 @@ Route::group(array('middleware' => array('auth'), 'prefix' => 'controll'), funct
 
 
     Route::get('/dashboard', function () {
-        return view('dashboard');
+      $users     =User::count();//here we get  the users numbers
+      $clients   =Client::count();
+      $networks  =Network::count();
+      $categorys =Category::count();
+      $packets   =Packet::count();
+      $ticket   =Ticket::count();
+
+      
+      //dd($clients);
+        return view('dashboard',compact('users','clients','networks','categorys','packets','ticket'));
     });
-    
-    
-    
+
+
+
     //dashboard
     Route::resource('users', 'UserController');
     Route::resource('categories', 'CategoryController');
@@ -87,12 +104,12 @@ Route::group(array('middleware' => array('auth'), 'prefix' => 'controll'), funct
     Route::get('importExport', 'MaatwebsiteDemoController@importExport');
     Route::get('downloadExcel/{type}', 'MaatwebsiteDemoController@downloadExcel');
     Route::post('importExcel', 'MaatwebsiteDemoController@importExcel');
-    
 
 
 
 
-    
+
+
 
 
 
